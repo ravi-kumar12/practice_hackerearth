@@ -1,0 +1,15 @@
+n=int(input())
+lst=[i for i in map(int,input().split())]
+l=[]
+for i in range(n):
+    temp=lst.pop(i)
+    if sum(lst)%7==0:
+        l.append(temp)
+    lst.insert(i,temp)
+if len(l)==0:
+    print("-1")
+else:
+    c=(min(l))
+    print(lst.index(c))
+
+        
